@@ -3,13 +3,13 @@ package tac_test
 import (
 	"strings"
 
-	yup "github.com/gloo-foo/framework"
+	gloo "github.com/gloo-foo/framework"
 	. "github.com/yupsh/tac"
 )
 
 func ExampleTac_basic() {
 	// echo "First\nSecond\nThird" | tac
-	yup.MustRun(
+	gloo.MustRun(
 		Tac(strings.NewReader("First\nSecond\nThird")),
 	)
 	// Output:
@@ -17,4 +17,3 @@ func ExampleTac_basic() {
 	// Second
 	// First
 }
-
